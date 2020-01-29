@@ -1,0 +1,26 @@
+$font-rubik: "Rubik";
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///  $base-url: 'http://cdn.example.com/assets/';
+$base-url: "assets/" !default;
+
+$blue: #0694ea;
+$lime: #9cc037;
+$lime-light: #9dc137;
+$red: #ff425a;
+$lavender: #3a5ba2;
+$ultraviolet: #536283;
+
+$gray-dark: #333333;
+$gray: #676767;
+$gray-light: #f4f7f9;
+$white: #ffffff;
+$black: #000000;
+
+$facebook: #3b5998;
+$twitter: #1da1f2;
+$instagram: #c32aa3;
+$google-plus: #db4437;
+$youtube: #ff0000;

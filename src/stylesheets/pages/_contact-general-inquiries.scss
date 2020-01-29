@@ -1,0 +1,23 @@
+.inquiries {
+  padding-bottom: 100px;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__text {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .inquiries {
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .inquiries {
+    padding-bottom: 50px;
+  }
+}

@@ -1,0 +1,381 @@
+import React, { Component } from 'react'
+import { Link } from 'gatsby'
+
+import classNames from 'classnames'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars,faTimes,faChevronDown,faCaretDown } from '@fortawesome/free-solid-svg-icons'
+
+export default class Header extends Component {
+  state = {
+    useCaseHover: false,
+    resourcesHover: false,
+    supportHover: false,
+    menuShow:false,
+    barShow: false,
+    featuresHover: false
+  }
+
+  toggleUseCaseDropdown = () => {
+    this.setState(state => ({
+      useCaseHover: !state.useCaseHover,
+      resourcesHover: false,
+      supportHover: false,
+      featuresHover: false
+    }))
+  }
+
+  toggleSupportDropdown = () => {
+    this.setState(state => ({
+      useCaseHover: false,
+      resourcesHover: false,
+      supportHover:  !state.supportHover,
+      featuresHover: false
+    }))
+  }
+
+  toggleResourcesDropdown = () => {
+    this.setState(state => ({
+      resourcesHover: !state.resourcesHover,
+      useCaseHover: false,
+      supportHover: false,
+      featuresHover: false
+    }))
+  }
+
+  toggleFeaturesDropdown = () => {
+    this.setState(state => ({
+      resourcesHover: false,
+      useCaseHover: false,
+      supportHover: false,
+      featuresHover: !state.featuresHover
+    }))
+  }
+
+  hideUseCase =() => {
+    this.setState({
+      useCaseHover: false
+    })
+  }
+
+  hideSupport = () => {
+    this.setState({
+      supportHover: false
+    })
+  }
+
+  hideResources = () => {
+    this.setState({
+      resourcesHover: false
+    })
+  }
+
+  hideFeatures = () => {
+    this.setState({
+      featuresHover: false
+    })
+  }
+
+  onShowMenu = () => {
+    this.setState({
+      menuShow: true,
+      barShow:true
+    })
+  }
+
+  onHideMenu = (e) => {
+    e.stopPropagation()
+
+    this.setState({
+      menuShow: false,
+      barShow: false
+    })
+  }
+
+  componentDidUpdate() {
+    this.state.menuShow ?
+      document.getElementsByTagName('body')[0].classList.add('constricted')
+      : document.getElementsByTagName('body')[0].classList.remove('constricted');
+    // console.log(this.state.menuShow)
+  }
+
+  render() {
+    return (
+      <header className="header">
+        <div className="header__wrapper header_wrap">
+          <div className="header_wrap__left">
+            <div className="header_wrap__logo">
+              <Link to="/">
+                <img className="logo-orig" src={require("../images/logo.svg")} alt="Logo" />
+                <img  className="logo-white" src={require("../images/testominial-logo.png")} alt="Logo" />
+              </Link>
+            </div>
+            <nav className="header_wrap__menu">
+              <ul>
+                <li className="platform_nav has_children">
+                  <Link to="/" className="platform_nav_link about-style" onMouseEnter={this.toggleFeaturesDropdown}>
+                    Features <FontAwesomeIcon icon={faCaretDown}/>
+                  </Link>
+
+                  <nav className={classNames('sub_menu', {
+                    'show': this.state.featuresHover
+                  })} onMouseLeave={this.hideFeatures}>
+                    <div className="ui d-flex container">
+                      <div className="sub_menu__item">
+                        <h3 className="title">FOR</h3>
+                        <ul>
+                          <li><Link to="/">DEDICATED PROXIES</Link></li>
+                          <li><Link to="/">RESEDENTIAL PROXIES</Link></li>
+                          <li><Link to="/">MOBILE PROXIES</Link></li>
+                        </ul>
+                      </div>
+
+                      <div className="sub_menu__item">
+                        <h3 className="title">FEATURES</h3>
+                        <ul className="special">
+                          <li>
+                            <Link to="/">REAL TIME CONVERSATIONS</Link>
+                            <p>24/7 real human support</p>
+                          </li>
+                          <li>
+                            <Link to="/">ANALYTICS</Link>
+                            <p>Collect user data</p>
+                          </li>
+                          <li>
+                            <Link to="/">AUTOMATED HELP CENTRE</Link>
+                            <p>Answer customer questions while you are gone</p>
+                          </li>
+                          <li>
+                            <Link to="/">UNCOMPARABLE PLANS</Link>
+                            <p>Get the best plans at best price</p>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div className="sub_menu__item">
+                        {/* <h3 className="title"></h3> */}
+                        <ul>
+                          <li>
+                            <Link to="/">ANONYMOUS VISITOR INTELLIGENCE</Link>
+                            <p>Give your sales team X-ray vision</p>
+                          </li>
+                          <li>
+                            <Link to="/">HOW IT WORKS</Link>
+                            <p>Get to know lime callmore closely</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="sub_menu__help">
+                        <a href="http://help.limeproxies.com" target="_blank" rel="noopener noreferrer">GET HELP NOW <img src={require("../images/icon_right_arrow_white.svg")} alt="" /></a>
+                      </div>
+                    </div>
+                  </nav>
+                </li>
+                {/* <li><Link to="/productOne">Features</Link></li> */}
+                <li className="platform_nav has_children">
+                  <Link to="/" className="platform_nav_link about-style" onMouseEnter={this.toggleUseCaseDropdown}>
+                    Use Case <FontAwesomeIcon icon={faCaretDown }/>
+                  </Link>
+
+                  <nav className={classNames('sub_menu ', {
+                    'show': this.state.useCaseHover
+                  })} onMouseLeave={this.hideUseCase}>
+                    <div className="ui container">
+                      <div className="sub_menu__item">
+                        <ul>
+                          <li><Link to="/sales-intelligence">Sales intelligence</Link></li>
+                          <li><Link to="/proxy-server-seo">Proxy server seo</Link></li>
+                          <li><Link to="/ad-verification-proxy-network">Ad verification proxy network</Link></li>
+                        </ul>
+                      </div>
+
+                      <div className="sub_menu__help">
+                      <a href="http://help.limeproxies.com" target="_blank" rel="noopener noreferrer">GET HELP NOW <img src={require("../images/icon_right_arrow_white.svg")} alt="Icon" /></a>
+                      </div>
+                    </div>
+                  </nav>
+                </li>
+
+                <li><Link to="/pricing">Pricing</Link></li>
+
+                <li className="platform_nav has_children">
+                  <Link to="/" className="about-style" onMouseEnter={this.toggleResourcesDropdown}>
+                    Resources <FontAwesomeIcon icon={faCaretDown }/>
+                  </Link>
+
+                  <nav className={classNames('sub_menu', {
+                  'show': this.state.resourcesHover
+                  })} onMouseLeave={this.hideResources}>
+                    <div className="ui container">
+                      <div className="sub_menu__item">
+                        <ul>
+                          <li><Link to="/">Tutorials</Link></li>
+                          <li><Link to="/blog">Blog</Link></li>
+                          <li><Link to="/">Api documentation</Link></li>
+                        </ul>
+                      </div>
+
+                      <div className="sub_menu__help">
+                        <a href="http://help.limeproxies.com" target="_blank" rel="noopener noreferrer">GET HELP NOW <img src={require("../images/icon_right_arrow_white.svg")} alt="Icon" /></a>
+                      </div>
+                    </div>
+                  </nav>
+                </li>
+
+                <li className="platform_nav has_children">
+                  <Link to="/" className="about-style" onMouseEnter={this.toggleSupportDropdown}>
+                    Support <FontAwesomeIcon icon={faCaretDown }/>
+                  </Link>
+
+                  <nav className={classNames('sub_menu', {
+                    'show': this.state.supportHover
+                    })} onMouseLeave={this.hideSupport}>
+                    <div className="ui container">
+                      <div className="sub_menu__item">
+                        <ul>
+                          <li><a href="http://help.limeproxies.com" target="_blank" rel="noopener noreferrer">Knowledgebase</a></li>
+                          <li><Link to="/contact">Contact support</Link></li>
+                          <li><a href="//status.limeproxies.com" target="_blank" rel="noopener noreferrer">Network status</a></li>
+                        </ul>
+                      </div>
+
+                      <div className="sub_menu__help">
+                        <a href="http://help.limeproxies.com" target="_blank" rel="noopener noreferrer">GET HELP NOW <img src={require("../images/icon_right_arrow_white.svg")} alt="Icon" /></a>
+                      </div>
+                    </div>
+                  </nav>
+                </li>
+
+                <li><Link className="about-style" to="/contact">Get A Demo</Link></li>
+              </ul>
+            </nav>
+
+            <nav className="header_wrap__mobile_menu mobile_menu">
+              <div className={classNames('mobile_menu__icon', {'barClose': this.state.barShow})}
+                onClick={this.onShowMenu}>
+                <FontAwesomeIcon className="bar" icon={faBars}></FontAwesomeIcon>
+              </div>
+
+              <div className={classNames('mobile_menu__close', {
+              'showClose': this.state.menuShow
+              })} onClick={this.onHideMenu}>
+                <FontAwesomeIcon icon={faTimes} ></FontAwesomeIcon>
+              </div>
+
+              <div className={classNames('mobile_menu_dropdown', {'show': this.state.menuShow})}>
+                <div className="mobile_menu_dropdown__wrapper">
+                  <div className="mobile_menu_dropdown__inner">
+                    <ul className={classNames({'show': this.state.menuShow})}>
+                      <li>
+                        <Link to="/" onClick={this.toggleFeaturesDropdown}>
+                          Features <FontAwesomeIcon icon={faChevronDown}/>
+                        </Link>
+                        <nav className={classNames('sub_menu', {'show': this.state.featuresHover})}
+                          onMouseLeave={this.hideFeatures}>
+                          <div className="ui container">
+                            <div className="sub_menu__item">
+                              <ul className={classNames('sub_menu', {'show': this.state.featuresHover})}>
+                                <h3 className="title">FOR</h3>
+                                <li><Link to="/" onClick={this.onHideMenu}>DEDICATED PROXIES</Link></li>
+                                <li><Link to="/" onClick={this.onHideMenu}>RESEDENTIAL PROXIES</Link></li>
+                                <li><Link to="/" onClick={this.onHideMenu}>MOBILE PROXIES</Link></li>
+                              </ul>
+                            </div>
+
+                            <div className="sub_menu__item">
+                              <ul className={classNames('sub_menu', {'show': this.state.featuresHover})}>
+                                <h3 className="title">FEATURES</h3>
+                                <li>
+                                  <Link to="/" onClick={this.onHideMenu}>REAL TIME CONVERSATIONS</Link>
+                                  <p>24/7 real human support</p>
+                                </li>
+                                <li>
+                                  <Link to="/" onClick={this.onHideMenu}>ANALYTICS</Link>
+                                  <p>Collect user data</p>
+                                </li>
+                                <li>
+                                  <Link to="/" onClick={this.onHideMenu}>AUTOMATED HELP CENTRE</Link>
+                                  <p>Answer customer questions while you are gone</p>
+                                </li>
+                                <li>
+                                  <Link to="/" onClick={this.onHideMenu}>UNCOMPARABLE PLANS</Link>
+                                  <p>Get the best plans at best price</p>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <div className="sub_menu__item">
+                              {/* <h3 className="title"></h3> */}
+                              <ul className={classNames('sub_menu', {'show': this.state.featuresHover})}>
+                                <li>
+                                  <Link to="/" onClick={this.onHideMenu}>ANONYMOUS VISITOR INTELLIGENCE</Link>
+                                  <p>Give your sales team X-ray vision</p>
+                                </li>
+                                <li>
+                                  <Link to="/" onClick={this.onHideMenu}>HOW IT WORKS</Link>
+                                  <p>Get to know lime callmore closely</p>
+                                </li>
+                                  <div className="sub_menu__help">
+                                  <a href="http://help.limeproxies.com" target="_blank" rel="noopener noreferrer">GET HELP NOW <img src={require("../images/icon_right_arrow_white.svg")} alt="Icon" /></a>
+                                </div>
+                              </ul>
+                            </div>
+                          </div>
+                        </nav>
+                      </li>
+                      <li>
+                        <Link to="/" onClick={this.toggleUseCaseDropdown}>
+                          Use Case <FontAwesomeIcon icon={faChevronDown} />
+                        </Link>
+                        <ul className={classNames('sub_menu', {'show': this.state.useCaseHover})}
+                          onClick={this.hideUseCase}>
+                          <li><Link to="/sales-intelligence" onClick={this.onHideMenu}>Sales intelligence</Link></li>
+                          <li><Link to="/proxy-server-seo" onClick={this.onHideMenu}>Proxy server seo</Link></li>
+                          <li><Link to="/ad-verification-proxy-network" onClick={this.onHideMenu}>Ad verification proxy network</Link></li>
+                          <li><Link to="/" onClick={this.onHideMenu}>Rank Tracking</Link></li>
+                          <li><Link to="/" onClick={this.onHideMenu}>Data Scrapping</Link></li>
+                          <li><Link to="/" onClick={this.onHideMenu}>Price Comparison</Link></li>
+                        </ul>
+                      </li>
+                      <li><Link to="/pricing" onClick={this.onHideMenu}>Pricing</Link></li>
+                      <li>
+                        <Link to="/" onClick={this.toggleResourcesDropdown}>
+                          Resources <FontAwesomeIcon className="res-down" icon={faChevronDown}/>
+                        </Link>
+                        <ul className={classNames('sub_menu', {'show': this.state.resourcesHover})}
+                          onClick={this.hideResources}>
+                          <li><Link to="/" onClick={this.onHideMenu}>Tutorials</Link></li>
+                          <li><Link to="/blog" onClick={this.onHideMenu}>Blog</Link></li>
+                          <li><Link to="/" onClick={this.onHideMenu}>Api documentation</Link></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <Link to="/" onClick={this.toggleSupportDropdown}>
+                          Support <FontAwesomeIcon className="res-down" icon={faChevronDown} />
+                        </Link>
+                        <ul className={classNames('sub_menu', {'show': this.state.supportHover})}
+                          onClick={this.hideSupport}>
+                          <li><a href="http://help.limeproxies.com" target="_blank" rel="noopener noreferrer" onClick={this.onHideMenu}>Knowledgebase</a></li>
+                          <li><Link to="/contact" onClick={this.onHideMenu}>Contact support</Link></li>
+                          <li><a href="//status.limeproxies.com" target="_blank" rel="noopener noreferrer" onClick={this.onHideMenu}>Network status</a></li>
+                        </ul>
+                      </li>
+                      <li><Link to="/contact" onClick={this.onHideMenu}>Get A Demo</Link></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+
+          <div className="header_wrap__right">
+            <form action="">
+              <input className="btn-con-style" type="email" placeholder="Enter your email" />
+              <input className="btn-con-get-style" type="submit" value="Get Started" />
+            </form>
+            <Link to="/" className="btn_white btn-about">Sign in</Link>
+          </div>
+        </div>
+      </header>
+    )
+  }
+}

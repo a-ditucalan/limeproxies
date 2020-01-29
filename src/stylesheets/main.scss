@@ -1,0 +1,52 @@
+//utils
+@import
+  'utils/functions',
+  'utils/mixins',
+  'utils/variables',
+  'utils/spacing';
+
+//base
+@import
+  'base/base',
+  'base/fonts',
+  'base/typography';
+
+//layout
+@import
+  'layout/header',
+  'layout/header-non-sticky',
+  'layout/footer',
+  'layout/validation',
+  'layout/range-slider',
+  'layout/logo-showcase',
+  'layout/contact-form';
+
+//pages
+@import
+  'pages/about',
+  'pages/contacts',
+  'pages/contact-help-centre',
+  'pages/contact-general-inquiries',
+  'pages/contact-sales',
+  'pages/fonts',
+  'pages/home',
+  'pages/it-managers',
+  'pages/media',
+  'pages/pricing',
+  'pages/baseproxies',
+  'pages/use-cases',
+  'pages/blog',
+  'pages/post',
+  'pages/customer',
+  'pages/quote',
+  'pages/resources',
+  // 'pages/resources-inner',
+  'pages/testimonial',
+  'pages/testimonialPage',
+  'pages/locations',
+  'pages/simple',
+  'pages/why-limeproxies',
+  'pages/affiliate',
+  'pages/faq',
+  'pages/support',
+  'pages/thanks';

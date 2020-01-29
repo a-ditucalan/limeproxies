@@ -1,0 +1,233 @@
+.testimonials {
+    &__banner {
+      padding: 100px 0;
+      background-image: linear-gradient(45deg,#0694ea,#0694ea 1.24647%,#9cc037 99.5069%,#9cc037);
+      &__title {
+        color: #fff;
+        text-align: center;
+      }
+    }
+
+    &-grid {
+      padding: 50px 0;
+
+    &__title {
+      padding: 30px 0px 50px;
+      text-align: center;
+      font-size: 35px;
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+
+      &__boxes {
+        padding-bottom: 50px;
+        width: 19%;
+  
+        .comment {
+          padding: 15px 15px;
+          margin-bottom: 10px;
+          color: white;
+          background-image: linear-gradient(45deg,#0694ea,#0694ea 1.24647%,#9cc037 99.5069%,#9cc037);
+          border-radius: 27px;
+        }
+  
+        .owner {
+          display: flex;
+  
+          .initials {
+            padding: 15px 15px;
+            width: 47px;
+            color: white;
+            background-image: linear-gradient(45deg,#0694ea,#0694ea 1.24647%,#9cc037 99.5069%,#9cc037);
+            border-radius: 50px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+          }
+          .name {
+            padding-left: 15px;
+            padding-top: 5px;
+            font-size: 12px;
+  
+            span {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .great-success {
+    padding-bottom: 100px;
+    
+      &__title {
+        padding: 10px 0px 80px;
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 40px;
+      }
+      &_wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &__box {
+          position: relative;
+          min-height: 318px;
+          width: 32%;
+          padding: 32px;
+          margin-bottom: 32px;
+          border: 1px solid #D5D5D5;
+          box-shadow: 0 0 20px 0 rgba(0,0,0,.05);
+
+          .stats {
+            font-size: 48px;
+          }
+          .content {
+            margin-bottom: 40px;
+            font-size: 30px;
+            font-weight: 200;
+          }
+          img {
+            position: absolute;
+            bottom: 45px;
+          }
+        }
+      }
+     }
+
+  @media screen and (max-width: 1199px) {
+  .testimonials-grid {
+    
+    &__wrapper {
+      &__boxes {
+        width: 23%;
+      }
+    }
+  }
+
+  .great-success {
+      &_wrapper{
+        &__box {
+          width: 49%;
+        }
+        .stats {
+          font-size: 40px;
+        }
+        .content {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    .testimonials-grid {
+      &__wrapper {
+        &__boxes {
+          width: 32%;
+        }
+      }
+    }
+
+    .great-success {
+      &_wrapper{
+        &__box {
+          width: 48%;
+          min-height: 250px;
+        }
+        .stats {
+          font-size: 35px;
+        }
+        .content {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) and (min-width: 576px){
+
+    &__banner {
+      &__title {
+        font-size: 25px;
+      }
+    }
+
+    .custom-container {
+      width: 500px !important;
+      margin: 0 auto !important;
+      .testimonials-grid {
+        &__title {
+          font-size: 25px;
+        }
+        &__wrapper {
+          &__boxes {
+            width: 48%;
+          }
+        }
+      }
+    }
+    .great-success {
+      &__title {
+        font-size: 25px;
+      }
+      &_wrapper{
+        &__box {
+          width: 100%;
+          min-height: 250px;
+        }
+        .stats {
+          font-size: 35px;
+        }
+        .content {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 575px) {
+    &__banner {
+      &__title {
+        font-size: 25px;
+      }
+    }
+    .custom-container {
+      margin-right: 1em;
+      margin-left: 1em;
+      .testimonials-grid {
+        &__title {
+          font-size: 25px;
+        }
+        &__wrapper {
+          &__boxes {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .great-success {
+      &__title {
+        font-size: 25px;
+      }
+      &_wrapper{
+        &__box {
+          width: 100%;
+          min-height: 250px;
+        }
+        .stats {
+          font-size: 35px;
+        }
+        .content {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

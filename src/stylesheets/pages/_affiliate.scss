@@ -1,0 +1,127 @@
+.bg-gray {
+  background-color: #f0f0f0;
+}
+
+.affiliate {
+  .btn {
+    max-width: 400px;
+  }
+}
+
+.affiliate-block {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__info {
+    flex: 0 0 48%;
+  }
+
+  &__pic {
+    flex: 0 0 48%;
+  }
+}
+
+.affiliate-graphic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 60px 60px 40px;
+  border: 2px #e7e7e7 solid;
+  border-radius: 6px;
+
+  &__laptop {
+    max-width: 280px;
+  }
+
+  &__arrow {
+    max-width: 340px;
+  }
+
+  &__profit {
+    @extend .t-p-md;
+    padding: 20px 0;
+    margin-top: 20px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    border-radius: 10px;
+  }
+}
+
+.affiliate-how-list {
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .affiliate-block {
+    &__content {
+      flex-wrap: wrap;
+    }
+
+    &__info {
+      flex: 0 0 100%;
+    }
+
+    &__pic {
+      flex: 0 0 100%;
+      order: -1;
+      
+      text-align: center;
+      margin-bottom: 25px;
+
+      img {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+  }
+
+  .affiliate-graphic {
+    padding: 40px 40px 40px 20px;
+
+    &__laptop {
+      max-width: 220px;
+    }
+
+    &__arrow {
+      max-width: 240px;
+    }
+
+    &__money {
+      max-width: 100px;
+    }
+  }
+
+  .affiliate-banner {
+    .affiliate-block {
+      &__info {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .affiliate-graphic {
+    flex-direction: column;
+    padding: 40px;
+
+    &__laptop,
+    &__arrow,
+    &__money {
+      max-width: 100%;
+    }
+
+    &__laptop,
+    &__arrow {
+      margin-bottom: 30px;
+    }
+  }
+}

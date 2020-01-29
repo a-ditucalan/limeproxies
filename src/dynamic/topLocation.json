@@ -1,0 +1,84 @@
+{
+  "toplocationContent": [
+    {
+      "contentsHere": {
+        "countryFlagImage": "/assets/us.png",
+        "linkPath": "/private-proxies/us-proxies",
+        "countryName": "United States",
+        "countryIps": ""
+      }
+    },
+    {
+      "contentsHere": {
+        "countryFlagImage": "/assets/uk.png",
+        "linkPath": "/private-proxies/uk-proxies",
+        "countryName": "United Kingdom",
+        "countryIps": ""
+      }
+    },
+    {
+      "contentsHere": {
+        "countryFlagImage": "/assets/bra.png",
+        "linkPath": "/private-proxies/brazil-proxies",
+        "countryName": "Brazil",
+        "countryIps": ""
+      }
+    },
+    {
+      "contentsHere": {
+        "countryFlagImage": "/assets/austria-flag.jpg",
+        "linkPath": "/#",
+        "countryName": "Austria",
+        "countryIps": ""
+      }
+    },
+    {
+      "contentsHere": {
+        "countryFlagImage": "/assets/fra.png",
+        "linkPath": "/#",
+        "countryName": "France",
+        "countryIps": ""
+      }
+    },
+    {
+      "contentsHere": {
+        "countryFlagImage": "/assets/ger.png",
+        "linkPath": "/private-proxies/germany-proxies",
+        "countryName": "Germany",
+        "countryIps": ""
+      }
+    },
+    {
+      "contentsHere": {
+        "countryFlagImage": "/assets/italy-flag.jpg",
+        "linkPath": "/#",
+        "countryName": "Italy",
+        "countryIps": ""
+      }
+    },
+    {
+      "contentsHere": {
+        "countryFlagImage": "/assets/can.png",
+        "linkPath": "/#",
+        "countryName": "Canada",
+        "countryIps": ""
+      }
+    },
+    {
+      "contentsHere": {
+        "countryFlagImage": "/assets/aus.png",
+        "linkPath": "/private-proxies/australia-proxies",
+        "countryName": "Australia",
+        "countryIps": ""
+      }
+    },
+    {
+      "contentsHere": {
+        "countryFlagImage": "/assets/denmark-flag.jpg",
+        "linkPath": "/#",
+        "countryName": "Denmark",
+        "countryIps": ""
+      }
+    }
+  ]
+}

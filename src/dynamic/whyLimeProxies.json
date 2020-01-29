@@ -1,0 +1,107 @@
+{
+  "titledescription": "We provide proxy services for all sizes of organisations and personal needs",
+  "section3title": "How People use our proxy service",
+  "section2": [
+    {
+      "section2content": {
+        "icon": "/assets/icon_reasons_1-9a0e7de6fdb9d4b3b2595d9878db5734-1-.svg",
+        "icontitle": "Blazing-fast Server speeds",
+        "icondescription": "Huge global network servers optimized for fast connections. Unlimited bandwidth, no throttling."
+      }
+    },
+    {
+      "section2content": {
+        "icon": "/assets/download.svg",
+        "icontitle": "No restrictions",
+        "icondescription": "Stream or download anything, from any of our servers, anywhere on Earth, with your IP address hidden from prying eyes."
+      }
+    },
+    {
+      "section2content": {
+        "icon": "/assets/download (1).svg",
+        "icontitle": "Serious security",
+        "icondescription": "Protect yourself from hacking and surveillance with 256-bit AES encryption and DNS/ IPv6 leak protection."
+      }
+    }
+  ],
+  "section3": [
+    {
+      "section3content": {
+        "section3icon": "/assets/s1.png",
+        "section3icontitle": "Market Research",
+        "section3icondescription": "Make business decisions that are based on real data about the market.",
+        "section3iconLink": "#"
+      }
+    },
+    {
+      "section3content": {
+        "section3icon": "/assets/s2.png",
+        "section3icontitle": "Brand Protection",
+        "section3icondescription": "Manage your brand perception and control brand reputation risks.",
+        "section3iconLink": "#"
+      }
+    },
+    {
+      "section3content": {
+        "section3icon": "/assets/s3.png",
+        "section3icontitle": "Travel Fare Aggregation",
+        "section3icondescription": "Offer the lowest rates from multiple travel sites to your customers.",
+        "section3iconLink": "/proxy-for-travel-fare-aggregation"
+      }
+    },
+    {
+      "section3content": {
+        "section3icon": "/assets/s4.png",
+        "section3icontitle": "Add Verification",
+        "section3icondescription": "Detect fraud, improve ad performance and protect your brand",
+        "section3iconLink": "/ad-verification-proxy-network"
+      }
+    },
+    {
+      "section3content": {
+        "section3icon": "/assets/s5.png",
+        "section3icontitle": "Pricing Intelligence",
+        "section3icondescription": "Get real time pricing data and easily track your competitors.",
+        "section3iconLink": "/proxy-for-price-tracking"
+      }
+    },
+    {
+      "section3content": {
+        "section3icon": "/assets/s6.png",
+        "section3icontitle": "SEO Monitoring",
+        "section3icondescription": "Extract SERP data, search volume or ranking data for any keyword",
+        "section3iconLink": "/proxy-for-seo"
+      }
+    },
+    {
+      "section3content": {
+        "section3icon": "/assets/s7.png",
+        "section3icontitle": "Online Gaming",
+        "section3icondescription": "Detect fraud, improve ad performance and protect your brand",
+        "section3iconLink": "/proxy-for-gaming"
+      }
+    },
+    {
+      "section3content": {
+        "section3icon": "/assets/s8.png",
+        "section3icontitle": "Sales Intelligence",
+        "section3icondescription": "Get real time pricing data and easily track your competitors.",
+        "section3iconLink": "/sales-intelligence"
+      }
+    },
+    {
+      "section3content": {
+        "section3icon": "/assets/s9.png",
+        "section3icontitle": "Blocked Content",
+        "section3icondescription": "Extract SERP data, search volume or ranking data for any keyword",
+        "section3iconLink": "/proxy-for-blocked-content"
+      }
+    }
+  ],
+  "bannerimage": "/assets/why-limeproxies-hero-2d2a99bfcd34088ca415fc0cb207a4f8.png",
+  "yoast_keyword": "best private proxies, elite private proxies, commercial proxy services, proxy service, professional proxy service",
+  "subtitle": "For exclusive use",
+  "description": "LimeProxies offers reliable, high-speed premium and private proxies.  Check out this excellent private proxy features. Contact us for more information.",
+  "meta_title": "Premium Proxies | Private Proxies Features | LimeProxies",
+  "maintitle": "Premium Proxies"
+}

@@ -1,0 +1,567 @@
+.customer {
+	&-banner {
+		height: 450px;
+		padding: 105px 0 255px 0;
+
+		&__title {
+			width: 43%;
+			
+			.title {
+				margin-bottom: 25px;
+
+				font-size: 40px;
+				font-weight: 400;
+			}
+		}
+
+		&__signup {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 35%;
+
+			&--button {
+				width: 225px;
+				
+				font-size: 20px !important;
+				color: $white !important;
+
+				background-image: url('../images/btn-bg.png') !important;
+				background-size: cover !important;
+				background-position: center !important;
+				border-radius: 10px !important;
+			}
+
+			&--text {
+				color: $blue;
+				font-weight: 500;
+				font-size: 20px;
+			}
+		}
+	}
+
+	&__content--first {
+		position: relative;
+		display: flex;
+		padding: 80px 0;
+
+		&-left {
+			.tapadoo {
+				margin-top: 25px;
+				width: 40%;
+
+				&__logo {
+					&--logo {
+						width: 135px;
+					}
+				}
+
+				&__testimonial {
+					margin-top: 10px;
+					background-image: url('../images/testimonial-icon.png');
+					background-repeat: no-repeat;
+					background-size: contain;
+					font-weight: 500;
+
+					span {
+						font-weight: 700;
+   						 font-style: italic;
+					}
+				}
+
+				&__ceo {
+					display: flex;
+					align-items: center;
+					&--name {
+						font-weight: 500;
+						font-size: 11px !important;
+
+					}
+				}
+			}
+		}
+
+		&-right {
+			position: absolute;
+			top: -267px;
+			right: 0;
+			width: 450px;
+			height: 530px;
+			background-position: 0px 188px;
+			background-image: url('../images/card-bg.png');
+			background-size: cover;
+			background-color: $white;
+			background-repeat: no-repeat;
+			border: 1px solid #f5f5f5;
+			box-shadow: 5px 1px 12px 1px #f5f5f5;
+
+			.float-card {
+				position: relative;
+				bottom: 0;
+				width: 290px;
+				left: 50%;
+
+				transform: translate(-50%,178%);
+
+				&--text {
+					color: $white;
+				}
+
+				&--logo {
+					&-logo {
+						width: 145px;
+					}
+				}
+
+				&--read {
+					text-transform: uppercase;
+					color: $white;
+				}
+			}
+		}
+	}
+
+	.customer-logo {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&-icon {
+			width: 100px;
+		}
+	}
+
+	.customer-travelmedia {
+		display: flex;
+		margin-top: 80px;
+		margin-bottom: 30px;
+		justify-content: space-between;
+
+		&__card {
+			display: flex;
+			width: 60%;
+		
+			box-shadow: 5px 3px 25px 10px #f5f5f5;
+			color: $black;
+
+			.card-divider {
+				width: 75%;
+			}
+
+			.travelmedia-text {
+				color: $white;
+			}
+	
+			.travelmedia-read {
+				color: $white;
+			}
+
+			.travelmedia-logo {
+				width: 150px;
+			}
+			.travel-media-holder {
+				padding-left:20px;
+				background-image: url('../images/travelmedia-bg.png');
+				background-size: cover;
+				background-position: right;
+				background-repeat: no-repeat;
+			}
+		}
+
+		&__right {
+			width: 32%;
+
+			.travelmedia-logo-right {
+				width: 150px;
+				margin-bottom: 20px;
+			}
+
+			.travelmedia-text-right {
+				font-weight: 500;
+			}
+
+			.ceo-holder {
+				display: flex;
+				align-items: center;
+
+				.tapadoo-ceo-img {
+					margin-right: 20px;
+					width: 35px;
+				}
+
+				.travelmedia-ceo-name {
+					font-weight: 500;
+				} 
+			}
+		}
+	}
+	.customer-logo-2 {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 100px 0;
+
+		&-icon-2 {
+			width: 150px;
+		}
+	}
+
+	.customer-card {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 80px;
+		
+		&-holder {
+			position: relative;
+			flex-basis: 49%;
+			padding: 30px 60px;
+			margin: 10px 0;
+			height: 200px;
+
+			border: 1px solid  #f5f5f5;
+			box-shadow: 1px 3px 5px 3px #f3eded;
+		}
+
+		&-text {
+			font-weight: 500;
+		}
+
+		&-read {
+			text-transform: uppercase;
+			color: $blue;
+		}
+
+		&-logo {
+			width: 100px;
+			height: 50px;
+			object-fit: contain;
+		&-logo:nth-child(5) {
+			width: 120px;
+		}
+
+			&-up {
+				position: absolute;
+				width: 60px;
+				top: 4px;
+				left: 39px;
+				height: 30px;
+			}
+		}
+	}
+	
+	.subscription {
+		display:flex;
+		flex-direction: column;
+		align-items:  center;
+		justify-content: center;
+
+		&-title {
+			color: $black;
+			font-size: 23px;
+			font-weight: 700;
+		}
+
+		&-logo {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+			align-items: center;
+
+			&-holder {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-basis: 25%;
+				margin:5px 0;
+				width: 94px;
+
+				&-img {
+					width: 100px;
+					height: 60px;
+					object-fit: contain
+				}
+			}
+		}
+
+		&-viewmore {
+			margin-top: 30px !important;
+			color: $blue !important;
+			background-color: transparent !important;
+			border: 1px solid $blue !important;
+			
+			&:hover {
+				background-color: $blue !important;
+				color: $white !important;
+			}
+
+			svg.svg-inline--fa.fa-long-arrow-alt-right.fa-w-14.right-long-arrow {
+				margin-left: 3px !important;
+			}
+		}
+
+		&-seehow {
+			margin:30px 0 80px;
+
+			color:#ffa500;
+
+			span {
+				color: $blue;
+			}
+
+			.right-long-arrow {
+				margin-left: 5px;
+				color: $blue;
+			}
+		}
+	}
+}
+
+@media screen and(min-width: 992px) {
+	.customer .customer-travelmedia__card {
+		height: 235px;
+	}
+}
+
+@media screen and(min-width: 992px) and (max-width: 1199px) {
+	.customer-banner__signup {
+		width: 38%;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+ .customer {
+	&-banner__signup--text {
+		white-space: nowrap;
+	}
+
+	&-banner__signup {
+		width: 45%;
+	}
+
+	&-banner__title {
+		width: 54%;
+	}
+
+	 &__content {
+		 &--first {
+			 &-right {
+				top: -201px !important;
+				width: 365px;
+			 }
+		 }
+	 }
+ }
+}
+@media screen and (min-width: 576px) and (max-width: 767px) {
+	.customer {
+
+		&-banner {
+			padding: 105px 0 134px 0;
+
+			&__title {
+				width: 100%;
+			}
+
+			&__signup {
+				width: 65%;
+			}
+		}
+
+		&-travelmedia{
+			&__right {
+				width: 39% !important;
+			}
+			
+			&__card {
+				width: 52% !important;	
+			}
+		}
+
+		&__content {
+
+			&--first {
+				padding: 40px 0;
+			}
+			&--first-right {
+				width: 270px;
+				height: 350px;
+				top: -90px;
+
+				background-position: 0px 105px;
+
+				.float-card {
+					width: 240px;
+					transform: translate(-50%, 80%);
+
+					&--logo-logo {
+						width: 120px;
+					}
+				}
+			}
+		}
+
+		&-logo {
+			flex-wrap: wrap;
+			justify-content: space-evenly !important;
+
+			&-icon {
+				width: 139px !important;
+			}
+		}
+
+		&-logo-2 {
+			flex-wrap: wrap;
+			justify-content: space-evenly !important;	
+		}
+
+		&-travelmedia {
+			&__card {
+				background-size: cover !important;
+
+				.card-divider {
+					width: 0 !important;
+				}
+				.travel-media-holder {
+					padding: 10px;
+				}
+			}
+		}
+
+		&-card {
+			&-holder {
+				flex-basis: 100% !important;
+			}
+		}
+
+		.subscription {
+			&-title {
+				text-align: center;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.customer {
+	
+
+		&-banner {
+			height: 330px;
+
+			&__title {
+				width: 100%;
+				
+				.title {
+					font-size: 25px;
+				}
+			}
+		}
+
+
+		&-banner__signup {
+			margin-top: 20px;
+			width: 100%;
+
+			&--button {
+				width: 160px;
+				font-size: 15px !important;
+			}
+			&--text {
+				font-size: 15px !important;
+			}
+		}
+
+		&__content {
+			&--first {
+				flex-direction: column;
+				
+				&-left { 
+					order: 2;
+
+					.tapadoo {
+						width: 100%;
+					}
+				}
+
+				&-right {
+					position: unset;
+					width: 100%;
+					height: 390px;
+
+					background-position: 0px 130px;
+
+					.float-card {
+						width: 270px;
+						transform: translate(-50%, 100%);
+					}
+				}
+			}
+		}
+
+		&-logo {
+			flex-direction: column;
+			justify-content: center !important;
+
+			&-icon {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding:20px;
+				width: 100% !important;
+			}
+		}
+
+		&-travelmedia {
+			flex-direction: column;
+
+			&__card {
+				width: 100% !important;
+
+				background-size: cover !important;
+			}
+
+			&__right {
+				margin-top: 20px;
+				width: 100% !important;
+			}
+		}
+
+		&-logo-2 {
+			flex-direction:column;
+			
+			&-icon-2 {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding:20px;
+				width: 100% !important;
+			}
+		}
+
+		&-card {
+			&-holder {
+				flex-basis: 100% !important;
+				padding: 30px 25px !important;
+			}
+		}
+
+		.subscription {
+			&-title {
+				text-align: center;
+			}
+
+			&-logo {
+
+				&-holder {
+					width: 100%;
+					&-img {
+						padding: 5px;
+						width: 100px;
+					}
+				}
+			}
+		}
+	}
+}

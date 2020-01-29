@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="51px" height="64px" viewBox="0 0 51 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>finger-wag-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="20180109_Support" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-789.000000, -929.000000)">
+        <g id="finger-wag-icon" transform="translate(789.000000, 929.000000)">
+            <rect id="Rectangle-12" fill="#FFFFFF" x="0" y="0" width="51" height="64"></rect>
+            <g id="Group-12" transform="translate(11.000000, 9.000000)">
+                <circle id="Oval" fill="#FFFFFF" fill-rule="nonzero" cx="14.5" cy="34.5" r="8.5"></circle>
+                <path d="M13.2106256,31.9836758 C12.9562506,31.9836758 12.8290632,31.8549289 12.5746882,31.8549289 C11.3028135,31.3399412 10.6668762,29.7949781 11.1756261,28.5075088 L15.1184376,18.5939956 C15.6271875,17.3065264 17.1534371,16.6627917 18.4253118,17.1777794 C19.6971865,17.6927671 20.3331238,19.2377302 19.8243739,20.5251995 L15.8815624,30.4387127 C15.3728125,31.4686881 14.3553128,32.1124227 13.2106256,31.9836758 Z" id="Shape" stroke="#243F69" stroke-width="2" fill="#FFFFFF" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M18.0519966,32.984668 C17.815875,32.984668 17.6978142,32.8637464 17.4616925,32.8637464 C16.2810844,32.3800598 15.6907803,30.9290001 16.1630236,29.7197837 L19.4687263,21.497112 C19.9409696,20.2878956 21.3576993,19.6832874 22.5383075,20.1669739 C23.7189156,20.6506605 24.3092197,22.1017202 23.8369764,23.3109366 L20.5312737,31.5336083 C20.1770912,32.5009814 19.1145439,33.1055897 18.0519966,32.984668 Z" id="Shape" stroke="#243F69" stroke-width="2" fill="#FFFFFF" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M7,22.793446 L16.2292824,2.566701 C16.7215108,1.463424 17.9520818,0.727905997 19.1826528,1.095665 C20.659338,1.463424 21.3976806,3.17963266 20.7823951,4.52808233 L12.4145123,25" id="Shape" stroke="#243F69" stroke-width="2" fill="#FFFFFF" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M8.99246916,40.7896732 C11.6578285,36.3461694 9.50015664,32.2835374 7.72325044,30.1252641 L8.3578598,30.3791786 C8.3578598,30.3791786 8.3578598,30.3791786 8.3578598,30.3791786 L11.0232191,31.3948366 C13.8155003,32.5374519 17.7500783,31.7757084 18.3846877,27.5861191 C18.3846877,27.5861191 16.7347033,26.8243756 15.8462502,26.4435038 L4.16943802,22 L0.869469351,30.2522213 C0.488703735,31.1409221 0.234859991,32.1565801 0.107938119,33.2991954 C-0.780514984,39.9009725 3.91559428,45.9949205 10.5155316,46.8836213 C15.9731721,47.6453648 21.050047,44.5983908 23.2077188,39.7740152 C23.7154063,38.5044427 24.984625,35.3305114 26,32.7913664" id="Shape" stroke="#243F69" stroke-width="2" fill="#FFFFFF" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M23.0704972,33.9838775 C22.8322467,33.9838775 22.7131215,33.8567211 22.474871,33.8567211 C21.2836186,33.3480955 20.6879924,31.8222186 21.1644934,30.5506546 L23.4278729,24.5743036 C23.9043738,23.3027396 25.3338767,22.6669576 26.525129,23.1755832 C27.7163814,23.6842088 28.3120076,25.2100856 27.8355066,26.4816497 L25.5721271,32.4580006 C25.2147514,33.4752519 24.1426243,34.1110339 23.0704972,33.9838775 Z" id="Shape" stroke="#243F69" stroke-width="2" fill="#FFFFFF" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M5,8 L9,8.1" id="Shape" stroke="#243F69" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M26,15 L23,13" id="Shape" stroke="#243F69" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M29,7.2 L25,7" id="Shape" stroke="#243F69" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M8,0 L11,2" id="Shape" stroke="#243F69" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

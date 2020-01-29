@@ -1,0 +1,52 @@
+{
+  "formContactEmail": "support@limeproxies.com",
+  "facebookLInk": "https://www.facebook.com/limeproxiesonline/",
+  "SecondBoxTitle": "Careers",
+  "findUsTitle": "Where you can find us",
+  "SecondBoxContent": "See what it’s like to work at Amplitude and view our current openings.",
+  "formContactNumber": "+1-855-442-9755",
+  "instagramLink": "https://www.instagram.com/limeproxies/",
+  "twitterLink": "https://twitter.com/limeproxies",
+  "pageDescription": "with the right people at Limeproxies. We’re here to help!",
+  "contactCard": [
+    {
+      "cardContent": {
+        "cardLogo": "/assets/phone-card.svg",
+        "cardTitle": "Sales",
+        "cardDescription": "Learn how product analytics can help you.",
+        "cardLabel": "Contact Sales"
+      }
+    },
+    {
+      "cardContent": {
+        "cardLogo": "/assets/notif-card.png",
+        "cardTitle": "FAQ",
+        "cardDescription": "Get help with your account or technical questions",
+        "cardLabel": "Visit the FAQ page"
+      }
+    },
+    {
+      "cardContent": {
+        "cardLogo": "/assets/send-card.svg",
+        "cardTitle": "Help & Support",
+        "cardDescription": "Have a question about something else?",
+        "cardLabel": "Contact Us"
+      }
+    }
+  ],
+  "SecondBoxLink": "https://purplerain.freshteam.com/jobs",
+  "lookingForTitle": "Looking for something else?",
+  "getInTouchTitle": "Lets get in touch...",
+  "address": "PurpleRain Technologies Inc 340 S Lemon Ave #9836 Walnut, CA 91789, United States",
+  "firstBoxLink": "/quote/",
+  "yoast_keyword": "private proxy service, internet proxy service, proxies, private proxies",
+  "getInTouchDescription": "We are available 24/7 for customer support",
+  "email": "info@purple-rain.io",
+  "description": "Looking for a reliable and fast Proxies? Let's get in touch. We are available round the clock on phone for technical support, call us on: +1-855-442-9755. ",
+  "youtubeLink": "https://www.youtube.com/channel/UCmRhZT7mgQAMc_A_ekDDydA",
+  "firstBoxTitle": "Custome Proxies",
+  "liveSupportLInk": "http://help.limeproxies.com",
+  "firstBoxContent": "Learn about our Custome proxy solution and on demant network",
+  "meta_title": "Reliable and Fast Private Proxies | Contact LimeProxies",
+  "mainTitle": "Let's get in touch..."
+}

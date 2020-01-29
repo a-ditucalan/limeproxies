@@ -1,0 +1,350 @@
+// @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
+
+*,
+:after,
+:before {
+  box-sizing: border-box !important;
+}
+
+#___gatsby {
+  overflow-x: hidden;
+}
+
+main {
+  padding-top: 71px;
+}
+
+main.article {
+  padding-top: 0;
+}
+
+
+body,
+.ui.input > input {
+  // font-family: "Montserrat", sans-serif !important;
+  font-family: "hero-new", sans-serif;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline-color: transparent;
+}
+
+.title-top-space {
+  margin-top: 30px !important;
+}
+
+.color-blue, {
+  color: $blue;
+}
+
+.pad-bottom {
+  padding-bottom: 70px
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.constricted {
+  overflow: hidden !important;
+}
+
+.p-relative {
+  position: relative !important;
+}
+
+.bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  // font-family: "Montserrat", sans-serif !important;
+  font-family: "hero-new", sans-serif;
+  transition: font-size .2s;
+}
+
+.pos-relative {
+  position: relative !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+a {
+  &:hover {
+    color: initial;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+.title {
+  margin: 0;
+}
+
+.container {
+  width: 1110px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.btn_white {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 93px;
+  height: 31px;
+  border: 1px solid $gray-dark;
+  border-radius: 6px;
+  color: $gray-dark;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.6px;
+  transition: .2s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $gray-dark;
+    color: $white;
+  }
+}
+
+.btn_bow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $blue;
+  background-color: $white;
+  border: 1px $blue solid;
+  border-radius: 6px;
+  transition: .2s;
+  cursor: pointer;
+
+  &:hover {
+    color: $white;
+    background-color: $blue;
+  }
+}
+
+.btn_blue {
+  color: $white;
+  background-color: $blue;
+  border: 1px $blue solid;
+  transition: .2s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $white;
+    color: $blue;
+  }
+}
+
+.bg-pastel-lime {
+  background-image: linear-gradient(
+    to right,
+    rgba(6, 148, 234, 0.21) 0%,
+    rgba(6, 148, 234, 0.2) 1.24647%,
+    rgba(157, 193, 55, 0.2) 99.5069%,
+    rgba(157, 193, 55, 0.2) 100%
+  );
+}
+
+.ui.button,
+a,
+div,
+input {
+  &.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: .6px;
+    
+    border-radius: 6px;
+    transition: .2s;
+    
+    cursor: pointer;
+  }
+
+  &.btn--wob {
+    color: $white;
+    background-color: $blue;
+    border: 1px $blue solid;
+
+    &:hover {
+      color: $blue;
+      background-color: $white;
+    }
+  }
+
+  &.btn--bow {
+    color: $blue;
+    background-color: $white;
+    border: 1px $blue solid;
+
+    &:hover {
+      color: $white;
+      background-color: $blue;
+    }
+  }
+
+  &.btn--gray {
+    color: $gray-dark;
+    background-color: #f8fafb;
+    border: 1px transparent solid;
+
+    &:hover {
+      color: #f8fafb;
+      background-color: $gray-dark;
+    }
+  }
+
+  &.btn--transparent {
+    background-color: rgba(255, 255, 255, 0);
+    color: $white;
+    border: 1px $white solid;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, .2);
+    }
+  }
+
+  &.btn--lg {
+    padding: 15px 30px;
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 575px) {
+    &.btn--full-mobile {
+      width: 100%;
+    }
+  }
+}
+
+.blue-lime-gradient {
+  background-image: linear-gradient(45deg, $blue 0%, $blue 1.24647%, $lime-light 99.5069%, $lime-light 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// Semantic Overrides
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: "hero-new", sans-serif;
+}
+
+@media screen and (min-width: 1200px) {
+  // .ui.container {
+  .home .ui.container,
+  .pricing .ui.container,
+  .use-case .ui.container,
+  .base-proxies .ui.container,
+  .locations .ui.container,
+  .contact .ui.container,
+  .simple .ui.container,
+  .quote .ui.container,
+  .resources .ui.container,
+  .article .ui.container,
+  .why-limeproxies .ui.container,
+  .about .ui.container,
+  .blog .ui.container,
+  .affiliate .ui.container,
+  .faq .ui.container,
+  .support .ui.container,
+  .it_managers_outer .ui.container,
+  .thanks .ui.container {
+    width: 980px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .home_started .ui.container {
+    width: 1120px;
+  }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+  // .ui.container {
+  .home .ui.container,
+  .pricing .ui.container,
+  .use-case .ui.container,
+  .base-proxies .ui.container,
+  .locations .ui.container,
+  .contact .ui.container,
+  .simple .ui.container,
+  .quote .ui.container,
+  .resources .ui.container,
+  .article .ui.container,
+  .why-limeproxies .ui.container,
+  .about .ui.container,
+  .blog .ui.container,
+  .affiliate .ui.container,
+  .faq .ui.container,
+  .support .ui.container,
+  .it_managers_outer .ui.container,
+  .thanks .ui.container {
+    width: 920px;
+  }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  // .ui.container {
+  .home .ui.container,
+  .pricing .ui.container,
+  .use-case .ui.container,
+  .base-proxies .ui.container,
+  .locations .ui.container,
+  .contact .ui.container,
+  .simple .ui.container,
+  .quote .ui.container,
+  .resources .ui.container,
+  .article .ui.container,
+  .why-limeproxies .ui.container,
+  .about .ui.container,
+  .blog .ui.container,
+  .affiliate .ui.container,
+  .faq .ui.container,
+  .support .ui.container,
+  .it_managers_outer .ui.container,
+  .thanks .ui.container  {
+    width: 710px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    padding-top: 65px;
+  }
+}

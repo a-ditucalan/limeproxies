@@ -1,0 +1,32 @@
+{
+  "statsContent": [
+    {
+      "contentsHere": {
+        "statsCount": "24/7",
+        "statsTitle": "Customer Support",
+        "statsDescription": "We provide premium support through our innovative Campfire Support system that sets us apart from other providers."
+      }
+    },
+    {
+      "contentsHere": {
+        "statsCount": "211",
+        "statsTitle": "Global Subnets",
+        "statsDescription": "We provide Proxies from multi mixed subnets from nationwide locations. We have more than 211 subnets."
+      }
+    },
+    {
+      "contentsHere": {
+        "statsCount": "1000",
+        "statsTitle": "1 GBPS Speed",
+        "statsDescription": "Unmatched blistering speed of 1000 Mbps/sec. Works Great for high performance, multithreaded softwares."
+      }
+    },
+    {
+      "contentsHere": {
+        "statsCount": "50",
+        "statsTitle": "50+ Locations",
+        "statsDescription": "Choice of several international and US geo locations, with high speed and 24/7 support 365 days a year."
+      }
+    }
+  ]
+}

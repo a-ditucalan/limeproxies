@@ -1,0 +1,104 @@
+.help {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 100px;
+  }
+
+  &__tutorials {
+    width: 620px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__list-wrapper {
+    &:not(:last-child) {
+      margin-bottom: 80px;
+    }
+  }
+
+  &__list {
+    li {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      color: $blue;
+      line-height: 1.2;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      &:before {
+        content: '■';
+        position: relative;
+        top: -3px;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+.help-faq {
+  width: 354px;
+  padding: 40px 30px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 32px 1px rgba(0, 0, 0, 0.08);
+
+  &__title {
+    color: $blue;
+    margin-bottom: 28px;
+  }
+
+  li {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .help {
+    &__tutorials {
+      width: 100%;
+    }
+    
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__list-wrapper {
+      margin-bottom: 80px;
+
+      &:not(:last-child) {
+        margin-bottom: 50px;
+      }
+    }
+
+    &__list {
+      width: 100%;
+    }
+  }
+
+  .help-faq {
+    box-shadow: none;
+    padding: 0;
+    width: 100%;
+
+    img {
+      display: block;
+      margin: 0 auto 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .help {
+    &__wrapper {
+      padding: 20px 30px 100px;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "ucfeaturesContent": [
+    {
+      "contentsHere": {
+        "featureIcon": "/assets/f1.svg",
+        "featureTitle": "Dedicated IPS",
+        "featureDescription": "Over 1 Million clean Premium IPs. Our IPs are never detected as proxies. Choose your own proxies and no one else will have access to it except you."
+      }
+    },
+    {
+      "contentsHere": {
+        "featureIcon": "/assets/f2.svg",
+        "featureTitle": "Simultaneous Usage",
+        "featureDescription": "Use different proxies without being detected or blocked. You will be authenticated for proxy usage only if you use more than 25 IPs at the same time."
+      }
+    },
+    {
+      "contentsHere": {
+        "featureIcon": "/assets/f3.svg",
+        "featureTitle": "Highly Anonymous",
+        "featureDescription": "With Limeproxies, you’re safe, secure and your data is always visible only to you."
+      }
+    },
+    {
+      "contentsHere": {
+        "featureIcon": "/assets/f4.svg",
+        "featureTitle": "Multiple Locations",
+        "featureDescription": "50 Geo locations including: UK, US, Germany, India, and more."
+      }
+    },
+    {
+      "contentsHere": {
+        "featureIcon": "/assets/f5.png",
+        "featureTitle": "24/7 Support",
+        "featureDescription": "Our team is at the top of your hand whenever you need help."
+      }
+    },
+    {
+      "contentsHere": {
+        "featureIcon": "/assets/f6.svg",
+        "featureTitle": "211+ Subnets",
+        "featureDescription": "Detailed usage statistics for your account will allow you to monitor and optimize your data collection process."
+      }
+    },
+    {
+      "contentsHere": {
+        "featureIcon": "/assets/f7.png",
+        "featureTitle": "High Performance",
+        "featureDescription": "Our proxies are great for high performance and multithreaded products"
+      }
+    },
+    {
+      "contentsHere": {
+        "featureIcon": "/assets/f8.png",
+        "featureTitle": "Anytime IP Refresh",
+        "featureDescription": "Detailed usage statistics for your account will allow you to monitor and optimize your data collection process."
+      }
+    },
+    {
+      "contentsHere": {
+        "featureIcon": "/assets/f9.png",
+        "featureTitle": "Automated Dash",
+        "featureDescription": "Detailed usage statistics for your account will allow you to monitor and optimize your data collection process."
+      }
+    }
+  ]
+}

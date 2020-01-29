@@ -1,0 +1,42 @@
+
+
+.thanks {
+  background: rgb(14, 30, 37);
+  .thanks-wrapper {
+    height: 50vh;
+  }
+
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 364px;
+    padding: 24px;
+    background: white;
+    color: rgb(14, 30, 37);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px 0 rgba(14, 30, 37, .16);
+  }
+
+  #back-link {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    text-decoration: none;
+    font-weight: 600;
+    line-height: 24px;
+    color: #00ad9f;
+  }
+
+}
+
+// .thanks footer.footer.show_desctop{
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+// }

@@ -1,0 +1,137 @@
+import React, { Component } from 'react'
+
+import { Helmet } from 'react-helmet'
+import SectionStarted from '../layout/section-started'
+import ImageObserver from '../layout/observer-image-target'
+import Header from '../layout/header'
+import Footer from '../layout/footer'
+import itManager from '../dynamic/itManager.json'
+
+
+
+export default class ITManagers extends Component {
+  render() {
+    const data = this.props.data;
+    const siteUrl = data.site.siteMetadata.siteUrl
+    return (
+      <main className="it_managers_outer">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <meta name="title" content={`"${itManager.meta_title}"`} />
+          <meta name="description" content={`"${itManager.description}"`} />
+          <meta name="keywords" content={`"${itManager.yoast_keyword}"`} />
+          <link rel="canonical" href={`${siteUrl}it-managers`} />
+          <title>{itManager.title} | Limeproxies</title>
+        </Helmet>
+
+        <Header/>
+
+        <section className="it_managers_header">
+          <div className="ui container">
+            <div className="it_managers_header__wrapper">
+              <div className="it_managers_header__item it_managers_header__info">
+                <h1 className="title t-h1">{itManager.bannerTitle}</h1>
+                <p>{itManager.bannerDescription}</p>
+                <div className="it_managers">
+                  <a className="btn_start btn btn--wob btn--lg" href="#/">Start now</a>
+                  <a className="btn_request btn btn--transparent btn--lg" href="/get-a-demo">Request Demo</a>
+                </div>
+              </div>
+              <div className="it_managers_header__item it_managers_header__pic">
+                <ImageObserver src={require("../images/img_it_managers_header.png")} altString="IT managers header" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="it_managers_features">
+          <div className="ui container">
+            <div className="it_managers_features__title">
+              <h2 className="title t-h2">{itManager.section1Title}</h2>
+            </div>
+            <div className="it_managers_features__text">
+              <p>{itManager.section1Description}</p>
+            </div>
+            <div className="it_managers_features__wrapper it_managers_features_wrap">
+
+
+            {itManager.section1.map((item) => (
+              <div key={item.section1listcontent.listTitle} className="it_managers_features_wrap__item it_managers_features_item">
+                <div className="it_managers_features_item__icon">
+                  <ImageObserver src={item.section1listcontent.listImage} altString="Icon" />
+                </div>
+                <div className="it_managers_features_item__text">
+                  <h3 className="title t-h3">{item.section1listcontent.listTitle}</h3>
+                  <p>{item.section1listcontent.listDescription}</p>
+                </div>
+              </div>
+            ))}
+
+    
+            </div>
+          </div>
+        </section>
+        <section className="it_managers_build">
+          <div className="ui container">
+            <div className="it_managers_build__wrapper it_managers_build_wrap">
+              <div className="it_managers_build_wrap__item it_managers_build_item it_managers_build__pic">
+                <ImageObserver src={require("../images/img_it_build.jpg")} />
+              </div>
+              <div className="it_managers_build_wrap__item it_managers_build_item it_managers_build__info">
+                <h3 className="title t-h2">{itManager.section2Title}</h3>
+                <p>{itManager.section2Description}</p>
+
+                <h3 className="title list-title t-h4">{itManager.section2ListTitle}</h3>
+                <ul>
+
+                  {itManager.section2.map((item) => (
+                    <li key={item}>
+                      <p>{item.section2listcontent.bulletStyleList}</p>
+                    </li>
+                  ))}
+
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="it_managers_connect">
+          <div className="it_managers_connect__triangle">
+            <ImageObserver src={require("../images/bg_part_connect_1.svg")} />
+          </div>
+          <div className="it_managers_connect__img">
+            <ImageObserver src={require("../images/img_it_connect.png")} alt="IT managers connect" />
+          </div>
+          <div className="ui container">
+            <div className="it_managers_connect__wrapper it_managers_connect_wrap">
+              <div className="it_managers_connect_wrap__item">
+                <h3 className="title t-h2">{itManager.section3Title}</h3>
+                <p>{itManager.section3Description}</p>
+
+                <h3 className="title list-title t-h4">{itManager.section3ListTitle}</h3>
+                <ul>
+                  {itManager.section3.map((item) => (
+                    <li>
+                      <p>{item.section3listcontent.bulletStyleList}</p>
+                    </li>
+                  ))}
+                </ul>
+                <a href="/get-a-demo" className="btn btn--wob btn--lg">Request Demo</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <SectionStarted/>
+        <Footer/>
+      </main>
+    )
+  }
+}
+export const query = graphql`
+  query itManagers {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
+  }
+`

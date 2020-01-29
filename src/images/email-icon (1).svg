@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>email-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="20180109_Support" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-412.000000, -621.000000)">
+        <g id="email-icon" transform="translate(413.000000, 622.000000)">
+            <polygon id="Shape" fill="#39B6E9" fill-rule="nonzero" points="0 15.1 0 38 38 38 38 32.4 38 15.1 38 15.1 19 1.7"></polygon>
+            <polyline id="Shape" stroke="#243F69" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="38 38 19 24 0 38 0 38 0 38"></polyline>
+            <polyline id="Shape" stroke="#243F69" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="6.4 10.4 0 15.1 0 15.1 0 15.1"></polyline>
+            <path d="M31.6,10.4 L38,15.1" id="Shape" stroke="#243F69" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <polygon id="Shape" stroke="#243F69" stroke-width="2" fill="#FFFFFF" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round" points="6.4 19.9 6.4 0 31.6 0 31.6 19.9 22.5 26.6 19 24 15.5 26.6"></polygon>
+            <path d="M12,7.2 L26,7.2" id="Shape" stroke="#243F69" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M12,12.8 L26,12.8" id="Shape" stroke="#243F69" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M12,18.4 L26,18.4" id="Shape" stroke="#243F69" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <polyline id="Shape" stroke="#243F69" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="22.7 26.5 38 15.1 38 15.1 38 15.1 38 32.4 38 38 0 38 0 15.1 0 15.1"></polyline>
+            <path d="M0,15.1 L15.2,26.3" id="Shape" stroke="#243F69" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+    </g>
+</svg>

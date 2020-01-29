@@ -1,0 +1,111 @@
+{
+  "calltoactions": [
+    {
+      "contentsHere": {
+        "helpIcon": "/assets/phone-icon-16c5ea4d9c7181e7cf6744239a367f5a.svg",
+        "helpLabel": "PHONE",
+        "helpDetails": "(936) 342-7014",
+        "helpLink": "tel:9363427014",
+        "targetNewTab": false
+      }
+    },
+    {
+      "contentsHere": {
+        "helpIcon": "/assets/mail.svg",
+        "helpLabel": "EMAIL",
+        "helpDetails": "info@limeproxies.io",
+        "helpLink": "mailto:info@purple-rain.io"
+      }
+    },
+    {
+      "contentsHere": {
+        "helpIcon": "/assets/chat.svg",
+        "helpLabel": "CHAT",
+        "helpDetails": "In Limeproxies",
+        "helpLink": "http://help.limeproxies.com",
+        "targetNewTab": true
+      }
+    },
+    {
+      "contentsHere": {
+        "helpIcon": "/assets/cloud.svg",
+        "helpLabel": "SMS",
+        "helpDetails": "(936) 342-7014",
+        "helpLink": "sms:+19363427014"
+      }
+    }
+  ],
+  "banner_title": "We've Got Your Back",
+  "requestTitle": "Ready to request a demo?",
+  "banner_description": "We believe that we can’t grow if you aren’t happy. Our Customer Success Team Extraordinaire has a long list of satisfied customers and has been ranked as one of the best in the business. ",
+  "section3title": "Still browsing?",
+  "supportContent": [
+    {
+      "contentsHere": {
+        "supportTitle": "Multi Channel Support",
+        "supportFor": "",
+        "helpDetails": "Reach out to us from wherever you are in the world using these three channels - phone, live chat and email. Get instant help!"
+      }
+    },
+    {
+      "contentsHere": {
+        "supportTitle": "Under 10 seconds response time",
+        "supportFor": "",
+        "helpDetails": "We take immense pride in being able to respond in under 10 seconds. Say goodbye to long waiting queues as we treat you on priority, just like what you deserve."
+      }
+    },
+    {
+      "contentsHere": {
+        "supportTitle": "Resolution in under 30 minutes",
+        "supportFor": "",
+        "helpDetails": "No more waiting for hours and days to seek a resolution. Our team ensures that you get your issues resolved in under 30 minutes and if we can’t (very unlikely), we shall keep you updated with the progress on the issue. Either way, you will not go unheard."
+      }
+    },
+    {
+      "contentsHere": {
+        "supportTitle": "Knowledge Base",
+        "supportFor": "",
+        "helpDetails": "We’ve spent many hours in curating a knowledge base for you. You can visit the page to learn more about the product, features, troubleshooting, billing and support, technical issues and more."
+      }
+    },
+    {
+      "contentsHere": {
+        "supportTitle": "24/7 Support",
+        "supportFor": "",
+        "helpDetails": "Reach out for help via phone, email or live chat at any hour, any day!"
+      }
+    }
+  ],
+  "section2title": "Here to Help, 24/7 ",
+  "section3description": "Find the price and plan that fits your business.",
+  "requestademo": [
+    {
+      "contentsHere": {
+        "requestNumber": "1",
+        "requestList": "We'll connect quickly to learn about your business."
+      }
+    },
+    {
+      "contentsHere": {
+        "requestNumber": "2",
+        "requestList": "We'll walk you through the Justworks product."
+      }
+    },
+    {
+      "contentsHere": {
+        "requestNumber": "3",
+        "requestList": "Together, we’ll build a program that works best for you."
+      }
+    },
+    {
+      "contentsHere": {
+        "requestNumber": "4",
+        "requestList": "Get started using Justworks!"
+      }
+    }
+  ],
+  "yoast_keyword": "proxy support",
+  "helpDescription": "We understand that you may require us anytime and anywhere and that is why we are ready to help you via chat, phone and email 24*7. Our pricings are affordable and transparent so that you can make the best choice while buying.",
+  "description": "Proxy 24/7 Support  Limeproxies powers subscriptions for businesses of all sizes. Powering subscriptions for 7000+ companies. Signup Now for Free!",
+  "meta_title": "Proxy Support |  24/7 SUPPORT | Limeproxies"
+}

@@ -1,0 +1,54 @@
+{
+  "gcTitle": "Global Coverage",
+  "gcDescription": "We offer proxies from every single country and every city in the world.",
+  "gcContent": [
+    {
+      "contentsHere": {
+        "featureIcon": "/assets/aus.svg",
+        "featureTitle": "Australia",
+        "featureDescription": "",
+        "featureLink": "/private-proxies/australia-proxies"
+      }
+    },
+    {
+      "contentsHere": {
+        "featureIcon": "/assets/us.svg",
+        "featureTitle": "United States",
+        "featureDescription": "",
+        "featureLink": "/private-proxies/us-proxies"
+      }
+    },
+    {
+      "contentsHere": {
+        "featureIcon": "/assets/canada.svg",
+        "featureTitle": "Canada",
+        "featureDescription": "",
+        "featureLink": "#"
+      }
+    },
+    {
+      "contentsHere": {
+        "featureIcon": "/assets/ireland.svg",
+        "featureTitle": "Ireland",
+        "featureDescription": "",
+        "featureLink": "#"
+      }
+    },
+    {
+      "contentsHere": {
+        "featureIcon": "/assets/spain.svg",
+        "featureTitle": "Spain",
+        "featureDescription": "",
+        "featureLink": "#"
+      }
+    },
+    {
+      "contentsHere": {
+        "featureIcon": "/assets/denmark.svg",
+        "featureTitle": "Denmark",
+        "featureDescription": "",
+        "featureLink": "#"
+      }
+    }
+  ]
+}

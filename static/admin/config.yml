@@ -1,0 +1,771 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: static/assets
+public_folder: assets
+publish_mode: editorial_workflow
+
+collections:
+  - name: blog
+    label: Blog
+    folder: src/content/blog
+    create: true
+    editor:
+      preview : false
+    fields:
+      - { name: meta_title, label: Meta title, widget: "string" }
+      - { name: yoast_keyword, label: Focus Keyword, widget: "string" }
+      - { name: description, label: Meta Description, widget: "string" }
+      - { name: path, label: Path, hint: desired URL of the blog post }
+      - { name: title, label: Title }
+      - { name: author,
+          label: Author,
+          widget: relation,
+          collection: authors,
+          searchFields: [title],
+          valueField: title,
+          hint: create new authors at the home of /admin }
+      - { name: date, label: Date, widget: date, format: YYYY-MM-DD }
+      - { name: excerpt, label: Excerpt, hint: short text that shows on /blog https://prnt.sc/n46234}
+      - { name: thumbnail,
+          label: Thumbnail Image,
+          widget: image,
+          hint: image that shows on the cards on /blog https://prnt.sc/n46349 }
+      - { name: altText, label: Thumnail Alt-text, widget: "string" }
+      - { label: Tags,
+        name: tags,
+        widget: list,
+        default: [],
+        hint: Consistent Word Case is Important! Analaytics is different from analytics. }
+      - { name: featured,
+          label: Featured on Blog Page?,
+          widget: boolean,
+          required: false,
+          hint: toggle to be featured on /blog https://prnt.sc/n463kv }
+      - { name: featurednail,
+          label: Thumbnail When Featured,
+          widget: image,
+          required: false,
+          hint: https://prnt.sc/n463kv }
+      - { name: body, label: Body, widget: markdown }
+  - name: authors
+    label: Authors
+    folder: src/content/authors
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { name: meta_title, label: Meta title, widget: "string" }
+      - { name: yoast_keyword, label: Focus Keyword, widget: "string" }
+      - { name: description, label: Meta Description, widget: "string" }
+      - { name: title, label: Author }
+      - { name: avatar, label: Avatar, widget: image }
+      - { name: bio, label: Bio/Description, widget: text }
+  - name: usecases
+    label: Use Case Pages
+    folder: src/content/usecases
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { name: meta_title, label: Meta title, widget: "string" }
+      - { name: yoast_keyword, label: Focus Keyword }
+      - { name: description, label: Meta Description }
+      - { name: path, label: Path, hint: desired URL of use case page }
+      - { name: title, label: Title }
+      - { name: heronail, label: Hero Image, widget: image }
+      - { name: subtitle, label: Subtitle }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: whylimeproxies
+    label: Clone Page
+    folder: src/content/whylimeproxies
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { name: meta_title, label: Meta title, widget: "string" }
+      - { name: yoast_keyword, label: Focus Keyword }
+      - { name: description, label: Meta Description }
+      - { name: path, label: Path, hint: desired URL of use case page } 
+      - { name: maintitle, label: Title, widget: "string", default: "title"}
+      - { name: subtitle, label: Title Blue, widget: "string"}
+      - { name: titledescription, label: Title Description, widget: "string"}
+      - { name: bannerimage, label: Banner Image, widget: image}
+      - label: "section 2"
+        name: "section2"
+        widget: "list"
+        fields:
+          - label: Section 2 Content
+            name: section2content
+            widget: object
+            fields:
+              - { label: Icon, name: icon, widget: image}
+              - { label: Icon Title, name: icontitle, widget: string, default: "default"}
+              - { label: Icon Description, name: icondescription, widget: string, default: "default"}
+      - {label: Section 3 Title, name: section3title, widget: "string"}       
+      - label: "section 3"
+        name: "section3"    
+        widget: "list"
+        fields:
+          - label: section 3 Content
+            name: section3content
+            widget: object
+            fields:
+              - { label: Icon, name: section3icon, widget: image}
+              - { label: Icon Title, name: section3icontitle, widget: "string"}
+              - { label: Icon Description, name: section3icondescription, widget: "string" }  
+  - name: readingpages
+    label: Reading Pages
+    folder: src/content/readingpages
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { name: meta_title, label: Meta title, widget: "string" }
+      - { name: yoast_keyword, label: Focus Keyword, widget: "string" }
+      - { name: description, label: Meta Description, widget: "string" }
+      - { name: path, label: Path, hint: desired URL of reading page }
+      - { name: title, label: Title }
+      - { name: tabTitle, label: Tab Title }
+      - { name: body, label: Body, widget: markdown }
+  - name: plainpages
+    label: Plain Pages
+    folder: src/content/plainpages
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { name: meta_title, label: Meta title, widget: "string" }
+      - { name: yoast_keyword, label: Focus Keyword, widget: "string" }
+      - { name: description, label: Meta Description, widget: "string" }
+      - { name: path, label: Path, hint: desired URL of reading page }
+      - { name: title, label: Title }
+      - { name: tabTitle, label: Tab Title }
+      - { name: body, label: Body, widget: markdown }
+  - name: locations
+    label: Locations/Countries
+    folder: src/content/locations
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { name: meta_title, label: Meta title, widget: "string" }
+      - { name: yoast_keyword, label: Focus Keyword, widget: "string" }
+      - { name: description, label: Meta Description, widget: "string" }
+      - { name: path, label: Path, hint: desired URL of location/country page }
+      - { name: title, label: Title }
+      - { name: highlight, label: Colored Highlight of Title, hint: part of the title that is colored in blue, must match case }
+      - { name: desccription, label: Banner Description, widget: "string" }
+      - { name: banner_text_content, label: Banner Text Content, widget: "string" }
+      - { name: be_sure_title, label: Be sure section title, widget: "string" }
+      - label: "Be sure Section"
+        name: "besure"
+        widget: "list"
+        fields:
+          - label: "Be sure Section Content"
+            name: "be_sure_section_content"
+            widget: object
+            fields:
+              - { name: be_sure_list_title, label: Be Sure List Title, widget: "string" }
+              - { name: be_sure_list_thumbnail, label: Be Sure List thumbnail, widget: image}
+              - { name: be_sure_alt_text, label: thumbnail alt text, widget: "string" }
+              - { name: be_sure_list_description, label: Be Sure List Description, widget: "string" }
+      - { name: awesome_features, label: "Awesome Features Title", widget: "string"}
+      - label: "awesome features list"
+        name: "awesome_features_list"
+        widget: "list"
+        fields:
+          - label: "Awesome features list content"
+            name: "awesome_features_list_content"
+            widget: object
+            fields:
+              - { name: awesome_features_list_thumbnail, label: awesome features list thumbnail, widget: image }
+              - { name: awesome_features_list_title, label: awesome features list title, widget: "string" }
+              - { name: awesome_features_list_description, label: awesome features list description, widget: "string" }
+      - { name: some_fullwidth_text, label: Some fullwidth text, widget: "string"}
+      - { name: use_limeproxies_title, label: Use Limeproxies Title, widget: "string" }
+      - { name: use_limeproxies_description, label: Use Limeproxies Description, widget: "string" }
+      - label: "use limeproxies" 
+        name: "use_limeproxies"
+        widget: "list"
+        fields: 
+          - label: "Use limeproxies list"
+            name: "use_limeproxies_list"
+            widget: object
+            fields:
+              - { name: use_limeproxies_list_thumbnail, label: Use Limeproxies List Thumbnail, widget: image }
+              - { name: use_limeproxies_list_title, label: Use Limeproxies List Title, widget: "string" }
+              - { name: use_limeproxies_list_description, label: Use Limeproxies List Description, widget: "string" }
+  - name: learning
+    label: Learning
+    folder: src/content/learning
+    create: false
+    editor:
+      preview: false
+    fields:
+      - { name: meta_title, label: Meta title, widget: "string" }
+      - { name: yoast_keyword, label: Focus Keyword, widget: "string" }
+      - { name: description, label: Meta Description, widget: "string" }
+      - { name: path, label: Path, hint: desired URL of the learning index }
+      - { name: title, label: Title }
+      - { name: subtitle, label: Subtitle, widget: text }
+      - { label: Hidden Type, name: hiddentype, widget: hidden, default: learningIndex }
+  - name: articles
+    label: Learning - Best Practices
+    folder: src/content/articles
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { name: meta_title, label: Meta title, widget: "string" }
+      - { name: yoast_keyword, label: Focus Keyword, widget: "string" }
+      - { name: description, label: Meta Description, widget: "string" }
+      - { name: path, label: Path, hint: desired URL of the learning - article }
+      - { name: title, label: Title }
+      - { name: author,
+          label: Author,
+          widget: relation,
+          collection: authors,
+          searchFields: [title],
+          valueField: title,
+          hint: create new authors at the home of /admin }
+      - { name: date, label: Date, widget: date, format: YYYY-MM-DD }
+      - { label: Tags, name: tags, widget: list, default: [], hint: Consistent Word Case is Important! Analaytics is different from analytics. }
+      - { name: excerpt, label: Excerpt, hint: short text that shows on the card }
+      - { name: thumbnail,
+          label: Thumbnail Image,
+          widget: image,
+          hint: image that shows on the cards }
+      - { label: Hidden Type, name: hiddentype, widget: hidden, default: article }
+      - { name: body, label: Body, widget: markdown }
+  - name: resources
+    label: Learning - Tutorials
+    folder: src/content/resources
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { name: meta_title, label: Meta title, widget: "string" }
+      - { name: yoast_keyword, label: Focus Keyword, widget: "string" }
+      - { name: description, label: Meta Description, widget: "string" }
+      - { name: path, label: Path, hint: desired URL of the learning - article }
+      - { name: title, label: Title }
+      - { name: author,
+          label: Author,
+          widget: relation,
+          collection: authors,
+          searchFields: [title],
+          valueField: title,
+          hint: create new authors at the home of /admin }
+      - { name: date, label: Date, widget: date, format: YYYY-MM-DD }
+      - { label: Tags, name: tags, widget: list, default: [], hint: Consistent Word Case is Important! Analaytics is different from analytics. }
+      - { name: excerpt, label: Excerpt, hint: short text that shows on the card }
+      - { name: thumbnail,
+          label: Thumbnail Image,
+          widget: image,
+          hint: image that shows on the cards }
+      - { label: Hidden Type, name: hiddentype, widget: hidden, default: resource }
+      - { name: body, label: Body, widget: markdown }
+  - name: videos
+    label: Learning - Videos
+    folder: src/content/videos
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { name: meta_title, label: Meta title, widget: "string" }
+      - { name: yoast_keyword, label: Focus Keyword, widget: "string" }
+      - { name: description, label: Meta Description, widget: "string" }
+      - { name: path, label: Path, hint: desired URL of the learning - video }
+      - { name: title, label: Title }
+      - { name: excerpt, label: excerpt }
+      - { name: upload_videos, label: Youtube Video ID, widget: "string" }
+      - { name: author,
+          label: Author,
+          widget: relation,
+          collection: authors,
+          searchFields: [title],
+          valueField: title,
+          hint: create new authors at the home of /admin }
+      - { label: Tags, name: tags, widget: list, default: [], hint: Consistent Word Case is Important! Analaytics is different from analytics. }
+      - { name: date, label: Date, widget: date, format: YYYY-MM-DD }
+      - { name: thumbnail,
+          label: Thumbnail Image,
+          widget: image,
+          hint: image that shows on the cards }
+      - { label: Hidden Type, name: hiddentype, widget: hidden, default: video }
+      - { name: body, label: Body, widget: markdown }
+  - label: 'Pages'
+    name: 'pages'
+    preview: false
+    files:
+     - label: 'IT Managers'
+       name: 'itManagers'
+       file: src/dynamic/itManager.json
+       preview: false
+       fields:
+        - { name: meta_title, label: Meta title, widget: "string" }
+        - { name: yoast_keyword, label: Focus Keyword, widget: "string" }
+        - { name: description, label: Meta Description, widget: "string" }
+        - { name: title, label: Title, widget: "string" }
+        - { name: bannerTitle, label: Banner Title, widget: "string" }
+        - { name: bannerDescription, label: Banner Description, widget: "string" }
+        - { name: section1Title, label: Section 1 Title, widget: "string" }
+        - { name: section1Description, label:  Section 1 Description, widget: "string" }
+        - label: Section 1 List
+          name: section1
+          widget: list
+          fields:
+            - label: Section 1 List Content
+              name: section1listcontent
+              widget: object
+              fields: 
+                - { label: List Image, name: listImage, widget: "image" }
+                - { label: List Title, name: listTitle, widget: "string" }
+                - { label: List Description, name: listDescription, widget: "string" }
+        - { label: Section 2 Title, name: section2Title, widget: "string" }
+        - { label: Section 2 Description, name: section2Description, widget: "string" }
+        - { label: Section 2 List Title, name: section2ListTitle, widget: "string" }
+        - label: Section 2 Title
+          name: section2
+          widget: list
+          fields:
+            - label: Section 2 List Content
+              name: section2listcontent
+              widget: object
+              fields: 
+                - { label: Bullet Style List, name: bulletStyleList, widget: "string" }
+        - { label: Section 3 Title, name: section3Title, widget: "string" }
+        - { label: Section 3 Description, name: section3Description, widget: "string" }
+        - { label: Section 3 List Title, name: section3ListTitle, widget: "string" }
+        - label: Section 3 Title
+          name: section3
+          widget: list
+          fields:
+            - label: Section 3 List Content
+              name: section3listcontent
+              widget: object
+              fields: 
+                - { label: Bullet Style List, name: bulletStyleList, widget: "string" }
+     - label: 'Proxies for Instagram'
+       name: 'proxiesfoinstagram'
+       file: src/dynamic/instagram.json
+       preview: false
+       fields:
+        - { label: meta title, name: metaTitle, widget: "string" }
+        - { label: meta Description, name: metaDescription , widget: "string" }
+        - { label: meta Keyword, name: metaKeyword, widget: "string" }
+        - { label: title, name: title, widget: "string"}
+        - { label: Sub Title, name: sub_title, widget: "string"}
+        - { label: Section 2 Title, name: section_2_title, widget: "string"}
+        - { label: Section 2 Sub Title, name: section_2_subtitle, widget: "string"}
+        - { label: Content 1 Image, name: content_1_image, widget: "image"}
+        - { label: Content 1 Title, name: content_1_title, widget: "string"}
+        - { label: Content 1 Description, name: content_1_description, widget: "string" }
+        - { label: Content 2 Image, name: content_2_image, widget: "image"}
+        - { label: Content 2 Title, name: content_2_title, widget: "string"}
+        - { label: Content 2 Description, name: content_2_description, widget: "string"}
+        - { label: Content 3 Image, name: content_3_image, widget: "image"}
+        - { label: Content 3 Title, name: content_3_title, widget: "string"}
+        - { label: Content 3 Description, name: content_3_description, widget: "string"}
+        - { label: Content 4 Image, name: content_4_image, widget: "image"}
+        - { label: Content 4 Title, name: content_4_title, widget: "string"}
+        - { label: Content 4 Description, name: content_4_description, widget: "string"}
+        - { label: Section 3 Title, name: section_3_title, widget: "string"}
+        - { label: Section 3 Description, name: section_3_description, widget: "string"}
+        - { label: Section 3 Subtitle, name: section_3_subtitle, widget: "string"}
+        - { label: Section 3 Sub Description 1, name: section_3_sub_description_1, widget: "string"}
+        - { label: Section 3 Sub Description 2, name: section_3_sub_description_2, widget: "string"}
+        - { label: Section 3 Sub Description 3, name: section_3_sub_description_3, widget: "string"}
+        - { label: Section 3 Sub Description 4, name: section_3_sub_description_4, widget: "string"}
+        - { label: Section 4 Title, name: section_4_title, widget: "string"}
+        - { label: Section 4 Description, name: section_4_description, widget: "string"}
+        - { label: section 4 Subtitle, name: section_4_subtitle, widget: "string"}
+        - { label: Section 4 Description 1, name: section_4_description_1, widget: "string"}
+        - { label: Section 4 Description 2, name: section_4_description_2, widget: "string"}
+        - { label: Section 4 Description 3, name: section_4_description_3, widget: "string"}
+        - { label: Section 4 Description 4, name: section_4_description_4, widget: "string"}
+     - label: 'Testimonials'
+       name: 'testimonials'
+       file: src/dynamic/testimonials.json
+       preview: false
+       fields:
+        - { name: meta_title, label: Meta title, widget: "string" }
+        - { name: yoast_keyword, label: Focus Keyword, widget: "string" }
+        - { name: description, label: Meta Description, widget: "string" }
+        - { name: banner_title, label: Banner Title, widget: "string" }
+        - { name: sectionOneTitle, label: Section 1 Title, widget: "string" }
+        - label: "Testimonials List"
+          name: "testimonialsList"
+          widget: "list"
+          fields:
+            - { name: name, label: name, widget: "string" }
+            - { name: image, label: image, widget: image }
+            - { name: shortCaption, label: short caption, widget: "string" }
+            - { name: comment, label: comment, widget: "text" }
+            - { name: date, label: Date, widget: date, format: YYYY-MM-DD }
+        - { name: sectionTwoTitle, label: section two title, widget: "string" }
+        - label: "Statistics"
+          name: "statistics"
+          widget: "list"
+          fields:
+            - { name: stats, label: stats, widget: "string" }
+            - { name: description, label: description, widget: "string" }
+            - label: company logo
+              name: companyLogo
+              widget: object
+              fields:
+                - { name: image, label: image, widget: image }
+                - { name: altText, label: alt Text, widget: "string" }
+     - label: 'Location Around The World'
+       name: 'locationAroundTheWorld'
+       file: src/dynamic/worldLocations.json
+       preview: false
+       fields:
+        - { name: meta_title, label: Meta title, widget: "string" }
+        - { name: yoast_keyword, label: Focus Keyword, widget: "string" }
+        - { name: description, label: Meta Description, widget: "string" }
+        - { name: bannerTitle, label: Banner title, widget: "string" }
+        - { name: bannerDescription, label: Banner Description, widget: "string" }
+        - { name: topLocationTitle, label: Top Location title, widget: "string" }
+        - label: "Top Location list"
+          name: "topLocationList"
+          widget: "list"
+          fields:
+            - label: Top Location Content
+              name: topLocationContent
+              widget: object
+              fields:
+                - { label: location image, name: locationImage, widget: image }
+                - { label: location Country, name: locationCountry, widget: "string" }
+                - { label: location ips, name: locationIps, widget: "string" }
+                - { label: location Link, name: locationLink, widget: "string" }
+        - { name: allLocationTitle, label: All Location Title, widget: "string" }
+        - { name: asia, label: asia title, widget: "string" }
+        - label: "Asia countries"
+          name: "asiaCounties"
+          widget: "list"
+          fields:
+            - label: content here
+              name: contentHere
+              widget: object
+              fields:
+                - { label: country, name: country, widget: "string" }
+        - { name: africa, label: africa Title, widget: "string" }
+        - label: "africa countries"
+          name: "africaCounties"
+          widget: "list"
+          fields:
+            - label: content here
+              name: contentHere
+              widget: object
+              fields:
+                - { label: country, name: country, widget: "string" }
+        - { name: europe, label: Europe Title, widget: "string" }
+        - label: "Europe countries"
+          name: "europeCounties"
+          widget: "list"
+          fields:
+            - label: content here
+              name: contentHere
+              widget: object
+              fields:
+                - { label: country, name: country, widget: "string" }
+        - { name: australia, label: australia Title, widget: "string" }
+        - label: "australia countries"
+          name: "australiaCounties"
+          widget: "list"
+          fields:
+            - label: content here
+              name: contentHere
+              widget: object
+              fields:
+                - { label: country, name: country, widget: "string" }
+        - { name: northAmerica, label: north america Title, widget: "string" }
+        - label: "north america countries"
+          name: "northAmericaCounties"
+          widget: "list"
+          fields:
+            - label: content here
+              name: contentHere
+              widget: object
+              fields:
+                - { label: country, name: country, widget: "string" }
+        - { name: southAmerica, label: south america Title, widget: "string" }
+        - label: "south america countries"
+          name: "southAmericaCounties"
+          widget: "list"
+          fields:
+            - label: content here
+              name: contentHere
+              widget: object
+              fields:
+                - { label: country, name: country, widget: "string" }
+        - { name: us, label: US Title, widget: "string" }
+        - label: "US"
+          name: "USCounties"
+          widget: "list"
+          fields:
+            - label: content here
+              name: contentHere
+              widget: object
+              fields:
+                - { label: country, name: country, widget: "string" }
+        - { name: faqTitle, label: FAQ title, widget: "string" }
+        - label: "faq list"
+          name: "faqList"
+          widget: "list"
+          fields:
+            - label: content here
+              name: contentHere
+              widget: object
+              fields:
+                - { label: faq question, name: faqQuestion, widget: "string" }
+                - { label: faq Answer, name: faqAnswer, widget: "string" }
+     - label: 'Contact'
+       name: 'contact'
+       file: src/dynamic/contact.json
+       preview: false
+       fields:
+        - { name: meta_title, label: Meta title, widget: "string" }
+        - { name: yoast_keyword, label: Focus Keyword, widget: "string" }
+        - { name: description, label: Meta Description, widget: "string" }
+        - { name: mainTitle, label: Main Title, widget: "string" }
+        - { name: pageDescription, label: Page Description, widget: "string" }
+        - label: "Contact Card"
+          name: "contactCard"
+          widget: "list"
+          fields:
+            - label: Card Content
+              name: cardContent
+              widget: object
+              fields:
+                - { label: Card Logo, name: cardLogo, widget: image }
+                - { label: Card Title, name: cardTitle, widget: "string" }
+                - { label: Card Description, name: cardDescription, widget: "string" }
+                - { label: Card Label, name: cardLabel, widget: "string" }
+        - { label: get in touch title, name: getInTouchTitle, widget: "string" }
+        - { label: get in touch Description, name: getInTouchDescription, widget: "string" }
+        - { label: form contact number, name: formContactNumber, widget: "string" }
+        - { label: form contact email, name: formContactEmail, widget: "string" }
+        - { label: facebook link, name: facebookLInk, widget: "string" }
+        - { label: instagram link, name: instagramLink, widget: "string" }
+        - { label: twitter link, name: twitterLink, widget: "string" }
+        - { label: youtube link, name: youtubeLink, widget: "string" }
+        - { label: Find us title, name: findUsTitle, widget: "string" }
+        - { label: address, name: address, widget: "string" }
+        - { label: email, name: email, widget: "string" }
+        - { label: Looking for Title, name: lookingForTitle, widget: "string" }
+        - { label: First box title, name: firstBoxTitle, widget: "string" }
+        - { label: First box Content, name: firstBoxContent, widget: "string" }
+        - { label: First box Link, name: firstBoxLink, widget: "string" }
+        - { label: Second box title, name: SecondBoxTitle, widget: "string" }
+        - { label: Second box Content, name: SecondBoxContent, widget: "string" }
+        - { label: Second box Link, name: SecondBoxLink, widget: "string" }
+        - { label: live support link, name: liveSupportLInk, widget: "string" }
+     - label: 'Craigs List Proxies'
+       name: 'craigslistproxies'
+       file: src/dynamic/craigslist.json
+       preview: false
+       fields:
+        - { label: meta_title, name: Meta title, widget: "string" }
+        - { label: title, name: title, widget: "string"}
+        - { label: Sub Title, name: sub_title, widget: "string"}
+        - { label: Section 2 Title, name: section_2_title, widget: "string"}
+        - { label: Section 2 Sub Title, name: section_2_subtitle, widget: "string"}
+        - { label: Content 1 Image, name: content_1_image, widget: "image"}
+        - { label: Content 1 Title, name: content_1_title, widget: "string"}
+        - { label: Content 1 Description, name: content_1_description, widget: "string" }
+        - { label: Content 2 Image, name: content_2_image, widget: "image"}
+        - { label: Content 2 Title, name: content_2_title, widget: "string"}
+        - { label: Content 2 Description, name: content_2_description, widget: "string"}
+        - { label: Content 3 Image, name: content_3_image, widget: "image"}
+        - { label: Content 3 Title, name: content_3_title, widget: "string"}
+        - { label: Content 3 Description, name: content_3_description, widget: "string"}
+        - { label: Content 4 Image, name: content_4_image, widget: "image"}
+        - { label: Content 4 Title, name: content_4_title, widget: "string"}
+        - { label: Content 4 Description, name: content_4_description, widget: "string"}
+        - { label: Section 3 Title, name: section_3_title, widget: "string"}
+        - { label: Section 3 Description, name: section_3_description, widget: "string"}
+        - { label: Section 3 Subtitle, name: section_3_subtitle, widget: "string"}
+        - { label: Section 3 Sub Description 1, name: section_3_sub_description_1, widget: "string"}
+        - { label: Section 3 Sub Description 2, name: section_3_sub_description_2, widget: "string"}
+        - { label: Section 3 Sub Description 3, name: section_3_sub_description_3, widget: "string"}
+        - { label: Section 3 Sub Description 4, name: section_3_sub_description_4, widget: "string"}
+        - { label: Section 4 Title, name: section_4_title, widget: "string"}
+        - { label: Section 4 Description, name: section_4_description, widget: "string"}
+        - { label: section 4 Subtitle, name: section_4_subtitle, widget: "string"}
+        - { label: Section 4 Description 1, name: section_4_description_1, widget: "string"}
+        - { label: Section 4 Description 2, name: section_4_description_2, widget: "string"}
+        - { label: Section 4 Description 3, name: section_4_description_3, widget: "string"}
+        - { label: Section 4 Description 4, name: section_4_description_4, widget: "string"}
+     - label: 'Why Limeproxies'
+       name: 'whylimeproxies'
+       file: src/dynamic/whyLimeProxies.json
+       preview: false
+       fields:
+        - { name: meta_title, label: Meta title, widget: "string" }
+        - { name: yoast_keyword, label: Focus Keyword, widget: "string" }
+        - { name: description, label: Meta Description, widget: "string" }
+        - { name: maintitle, label: Title, widget: "string", default: "title"}
+        - { name: subtitle, label: Title Blue, widget: "string"}
+        - { name: titledescription, label: Title Description, widget: "string"}
+        - { name: bannerimage, label: Banner Image, widget: image}
+        - label: "section 2"
+          name: "section2"
+          widget: "list"
+          fields:
+            - label: Section 2 Content
+              name: section2content
+              widget: object
+              fields:
+                - { label: Icon, name: icon, widget: image}
+                - { label: Icon Title, name: icontitle, widget: string, default: "default"}
+                - { label: Icon Description, name: icondescription, widget: string, default: "default"}
+        - { label: Section 3 Title, name: section3title, widget: "string" }       
+        - label: "section 3"
+          name: "section3"    
+          widget: "list"
+          fields:
+            - label: section 3 Content
+              name: section3content
+              widget: object
+              fields:
+                - { label: Icon, name: section3icon, widget: image}
+                - { label: Icon Title, name: section3icontitle, widget: "string"}
+                - { label: Icon Description, name: section3icondescription, widget: "string" }
+                - { label: Icon Link, name: section3iconLink, widget: "string" }
+     - label: 'Support'
+       name: 'support'
+       file: src/dynamic/support.json
+       fields:
+        - { name: meta_title, label: Meta title, widget: "string" }
+        - { name: yoast_keyword, label: Focus Keyword, widget: "string" }
+        - { name: description, label: Meta Description, widget: "string" }
+        - { label: banner title, name: banner_title, widget: "string" }
+        - { label: banner Description, name: banner_description, widget: "string" }
+        - { label: Section 2 title, name: section2title, widget: "string" }
+        - label: Call to actions
+          name: calltoactions
+          widget: list
+          fields:
+            - label: Contents Here
+              name: contentsHere
+              widget: object
+              fields:
+                - { label: Help Icon, name: helpIcon, widget: "image" }
+                - { label: Help Label, name: helpLabel, widget: "string" }
+                - { label: Help Details, name: helpDetails, widget: "string" }
+                - { label: Help Link, name: helpLink, widget: "string" }
+                - { label: Target New Tab?, name: targetNewTab, widget: boolean, required: false }    
+        - { label: Help Description, name: helpDescription, widget: "string" }
+        - label: Support Content
+          name: supportContent
+          widget: list
+          fields:
+            - label: Contents Here
+              name: contentsHere
+              widget: object
+              fields:
+                - { label: Support title, name: supportTitle, widget: "string" }
+                - { label: Support For?, name: supportFor, widget: "string" }
+                - { label: Support body, name: helpDetails, widget: "string" }
+        - { label: Section 3 title, name: section3title, widget: "string" }
+        - { label: Section 3 Description, name: section3description, widget: "string" }
+        - { label: Request a demo title, name: requestTitle, widget: "string" }
+        - label: Request a demo
+          name: requestademo
+          widget: list
+          fields:
+            - label: Contents Here
+              name: contentsHere
+              widget: object
+              fields:
+                - { label: request number, name: requestNumber, widget: "string" }
+                - { label: request list, name: requestList, widget: "string" }
+  - label: 'GlobalSectionsDynamic'
+    name: 'global'
+    files:
+     - label: 'Questions box'
+       name: 'questions'
+       file: src/dynamic/sectionQuestions.json
+       preview: false
+       fields:
+        - { name: question_info, label: Question Info, widget: "string" }
+        - { name: support_image, label: Support Image, widget: image } 
+        - { name: support_name, label: Support Name, widget: "string" }
+        - { name: support_email, label : Support Email, widget: "string" }
+        - { name: support_number, label: Support Contact Number, widget: "string" }    
+     - label: 'Use cases features'
+       name: 'useCasesfeatures'
+       file: src/dynamic/sectionFeatures.json
+       fields:
+        - label: Use cases Features Content
+          name: ucfeaturesContent
+          widget: list
+          fields:
+            - label: Contents Here
+              name: contentsHere
+              widget: object
+              fields:
+                - { label: Icon, name: featureIcon, widget: image } 
+                - { label: Icon Title, name: featureTitle, widget: "string"}
+                - { label: Icon Description, name: featureDescription, widget: "string"}
+     - label: 'Global Coverage'
+       name: 'globalCoverage'
+       file: src/dynamic/globalCoverage.json
+       fields:
+        - { name: gcTitle, label: Global Coverage Title, widget: "string" }
+        - { name: gcDescription, label: Global Coverage Description, widget: "string" }
+        - label: Global Coverage Content
+          name: gcContent
+          widget: list
+          fields:
+            - label: Contents Here
+              name: contentsHere
+              widget: object
+              fields:
+                - { label: Icon, name: featureIcon, widget: image } 
+                - { label: Icon Title, name: featureTitle, widget: "string"}
+                - { label: Icon Description, name: featureDescription, widget: "string"}
+                - { label: Icon Link, name: featureLink, widget: "string"}
+     - label: 'Stats Section Limeproxies'
+       name: 'stats'
+       file: src/dynamic/statsLimeproxies.json
+       fields:
+        - label: Stats Section Limeproxies Content
+          name: statsContent
+          widget: list
+          fields:
+            - label: Contents Here
+              name: contentsHere
+              widget: object
+              fields:
+                - { label: Stats Count, name: statsCount, widget: "string" } 
+                - { label: Stats Title, name: statsTitle, widget: "string"}
+                - { label: Stats Description, name: statsDescription, widget: "string"}
+     - label: 'Top Location'
+       name: 'topLocation'
+       file: src/dynamic/topLocation.json
+       fields:
+        - label: Top Location Content
+          name: toplocationContent
+          widget: list
+          fields:
+            - label: Contents Here
+              name: contentsHere
+              widget: object
+              fields:
+                - { label: Country Flag Image, name: countryFlagImage, widget: "image" }
+                - { label: Link / Path (ex. /uk-proxies), name: linkPath, widget: "string" }
+                - { label: Country Name, name: countryName, widget: "string" }
+                - { label: Country IPs, name: countryIps, widget: "string" }
+
+
+
+
+            
+
+     
